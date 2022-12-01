@@ -12,12 +12,12 @@ router.post('/', (req, res) => {
     if (!newTitle || !newText) {
         res.status(400).json({msg: 'Need non-empty title and text input.'})
     } else {
-        const newJSON = {
+        const newJet = {
             id: uuid.v4(),
             title: newTitle,
             text: newText
         };
-        data.push(newJSON);
+        data.push(newJet);
         res.json(data);
     };
 });
